@@ -1,0 +1,182 @@
+@charset "utf-8";
+/* CSS Document */
+*{box-sizing:border-box;}
+.img-100{width:100%;height:auto}
+.container{width:80%; margin:auto}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+  /*border: 1px solid red*/
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.shadow{box-shadow:0 2px 5px #ddd}
+.text-center{text-align: center}
+
+/*----spacing style*/
+.mt-0{ margin-top: 0px}
+.mt-5{ margin-top: 5px}
+.mt-10{ margin-top: 10px}
+.mt-20{ margin-top: 20px}
+.mb-10{ margin-bottom: 10px}
+.mb-20{ margin-bottom: 20px}
+.p-0{ padding: 0px}
+.mx-auto{ margin-left: auto; margin-right: auto}
+.d-block{display:block}
+.d-flex{display:flex}
+.justify-bettween{justify-content: space-between}
+
+/*----color style*/
+.bg-primary{background-color:#F59F00}
+.bg-secondary{background-color:#eee}
+.tex-primary{color:#F59F00}
+.text-light{color:#fff}
+.text-dark{color:#333}
+
+/*----color style*/
+.bg-primary{background-color:#F59F00}
+.bg-secondary{background-color:#eee}
+.tex-primary{color:#F59F00}
+.text-light{color:#fff}
+.text-dark{color:#333}
+a{color:#333; text-decoration: none}
+a:hover{color:tomato}
+
+.menu{margin-top:10px}
+
+.menu ul{ 
+	margin:0; 
+	padding:0;
+	list-style: none; 
+	display: flex;}
+.menu ul li a{
+	padding: 10px 40px;
+	display: block; 
+	text-decoration: none; 	
+	color: #666; 
+	text-transform: inherit;
+	font-size: 20px;
+	transition: all .5s}
+.menu ul li a:hover{color: tomato}
+.menu ul li{position: relative}
+.menu ul ul{position: absolute;
+flex-direction: column;
+z-index: 99999;background: rgba(255,255,255,.8);box-shadow: 0 5px #333;
+transition: all 1s;
+top:200%;opacity: 0;visibility: visible}
+.menu ul ul li{border-bottom: 1px dotted #555}
+.menu ul ul li a{font-size: 16px;padding: 10px}
+.menu ul ul li a:hover{
+	padding-left: 15px;}
+.menu ul li:hover> ul{opacity: 1
+	;top:100%}
+.ke-over{
+	border-bottom: tomato 2px solid;transform: scaleX(0);transition: all .3s
+}
+.menu ul li:hover >.ke-over{
+	transform: scale(1)
+}
+
+/*-----------style cho 5 anh banner--------------------*/
+.item-dm{position: relative; perspective: 500px;overflow: hidden}
+.item-detail{position: absolute; top:40%; left: 5%;
+color:#fff;font-size: 20px}
+.item-detail h1{font-size: 8vh}
+.btn-detail{border:1px #fff solid;
+padding: 10px 15px;color:#fff;
+	}
+.btn-detail:hover{background:  #ddd;color: #333
+	}
+/*-----------style cho box 4 anh nho--------------------*/
+.item-detail-1{position: absolute;
+width: 100%;left: 0;
+top:25%;color:#fff;text-align: center;}
+.item-detail-1 h2 .item-detail-hover-1 h2{font-size: 30px}
+.item-detail-hover-1{
+	background: #000;
+	position: absolute;left: 10%;top:10%;width:80%; height: 80%;
+	text-align: center;color:#fff;
+	padding: 10%;opacity: 0;transform: scale(0);border-radius: 30%;
+	transition: all 1s;
+}
+.item-dm:hover>.item-detail-hover-1{opacity: 1; transform: scale(1);border-radius: 0%}
+
+.item-detail-hover-2{
+	background: #000;
+	position: absolute;left: 10%;top:10%;width:80%; height: 80%;
+	text-align: center;color:#fff;
+	padding: 10%;
+	transform: rotateY(-180deg);backface-visibility: hidden;/*an mat nguoc*/
+	transition: all 1s;
+}
+.item-dm:hover>.item-detail-hover-2{; transform: rotateY(0)}
+
+.item-detail-hover-3{
+	background: #000;
+	position: absolute;left: 10%;top:10%;width:80%; height: 80%;
+	text-align: center;color:#fff;
+	padding: 10%;
+	transform: rotateX(-180deg);backface-visibility: hidden;/*an mat nguoc*/
+	transition: all 1s;
+}
+.item-dm:hover>.item-detail-hover-3{; transform: rotateX(0)}
+
+.item-detail-hover-4{
+	background: #000;
+	position: absolute;left: 10%;top:10%;width:80%; height: 80%;
+	text-align: center;color:#fff;
+	padding: 10%;
+	transform: translate(-110%,0) scale(0)skewX(20deg);
+	transition: all 1s;
+}
+.item-dm:hover>.item-detail-hover-4{; transform: translate(0) scale(1) skewX(0)}
+
+.product-name{
+	display: flex; justify-content: space-between;align-items: center;
+	margin: 20px 0 5px 0}
+.product-name h3{ font-size: 24px}
+.product-name i{color:#F59F00; font-size: 24px; margin:2px;}
+.gia-tien{color:#666;font-size: 20px;margin-top: 2px}
+.product{position: relative}
+.product .i-shopping{position: absolute;
+left:0;top:68%; width: 100%;display: flex;justify-content: center;opacity: 0;
+transition: all 1s}
+.product .i-shopping .outline{background: #ddd; margin:10px; padding:10px;border-radius: 5px}
+.product:hover >.i-shopping{opacity: 1; top:55%} 	
+
+.input-form{
+	width: 45%; padding: 15px; font-size:1.2em;
+	border:1px solix #666;
+	font-style: italic;
+}
+.btn-form{
+	background: #000;color:#666;
+	border: 1px solix #666;
+	padding: 15px;
+}
+.btn-form:hover{
+	background: #fff;color:#333;cursor: pointer
+}
+main{min-height: 500px;}
+footer{min-height: 500px;padding: 50px 0;
+	background: #333;color:#fff}
+
+/*-----------style cho Aboutus--------------------*/
+.tieudetrang{background:url("images/about-us-page-heading.jpg")no-repeat center top; min-height: 500px; color:#fff;
+display: flex;align-items: center;justify-content: center}
+
